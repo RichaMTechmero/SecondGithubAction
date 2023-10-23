@@ -27,7 +27,7 @@ default_platform(:ios)
 RjGPkGTIrGlJMZo6wllLPrq8sMugCgYIKoZIzj0DAQehRANCAASPU6GJb1cTDCGV
 oyL+SuazBpyPSaQ+9FTSEzvIicu+tXuLDX5plbv+zeCIN2muhvfrnvlAgRrN/vjU
 6lMs2xEN\n-----END PRIVATE KEY-----"
-    GIT_AUTHORIZATION = "RichaMTechmero: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"
+    GIT_AUTHORIZATION = "RichaMTechmero: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"
 
 
 def delete_temp_keychain(name)
