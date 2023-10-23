@@ -22,12 +22,12 @@ default_platform(:ios)
     TEMP_KEYCHAIN_USER = "techmero"
     TEMP_KEYCHAIN_PASSWORD = "techmero"
     APPLE_ISSUER_ID = "37938031-4e89-484d-96e6-213008263413"
-    APPLE_KEY_ID = "7D3QVD3V3B"
+    APPLE_KEY_ID = "5NSJ6YJCW7"
     APPLE_KEY_CONTENT = "-----BEGIN PRIVATE KEY-----\nMIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgrTU8Dto9UQqoL7Xp
 RjGPkGTIrGlJMZo6wllLPrq8sMugCgYIKoZIzj0DAQehRANCAASPU6GJb1cTDCGV
 oyL+SuazBpyPSaQ+9FTSEzvIicu+tXuLDX5plbv+zeCIN2muhvfrnvlAgRrN/vjU
 6lMs2xEN\n-----END PRIVATE KEY-----"
-    GIT_AUTHORIZATION = "RichaMTechmero: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"
+    GIT_AUTHORIZATION = "RichaMTechmero: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"
 
 
 def delete_temp_keychain(name)
@@ -79,7 +79,7 @@ platform :ios do
       type: 'appstore',
       app_identifier: "#{DEVELOPER_APP_IDENTIFIER}",
       git_basic_authorization: Base64.strict_encode64(GIT_AUTHORIZATION),
-      readonly: true,
+      readonly: false,
       keychain_name: keychain_name,
       keychain_password: keychain_password,
       api_key: api_key
@@ -100,6 +100,7 @@ platform :ios do
 
 
     pilot(
+	itc_provider:"#{DEVELOPER_APP_ID}",
       apple_id: "#{DEVELOPER_APP_ID}",
       app_identifier: "#{DEVELOPER_APP_IDENTIFIER}",
       skip_waiting_for_build_processing: true,
