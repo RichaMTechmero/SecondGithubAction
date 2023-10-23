@@ -1,0 +1,115 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+
+    DEVELOPER_APP_ID = "6469590329"
+    DEVELOPER_APP_IDENTIFIER = "com.techmero.TestingGithub"
+    PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.techmero.TestingGithub"
+    TEMP_KEYCHAIN_USER = "techmero"
+    TEMP_KEYCHAIN_PASSWORD = "techmero"
+    APPLE_ISSUER_ID = "37938031-4e89-484d-96e6-213008263413"
+    APPLE_KEY_ID = "7D3QVD3V3B"
+    APPLE_KEY_CONTENT = "-----BEGIN PRIVATE KEY-----\nMIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgrTU8Dto9UQqoL7Xp
+RjGPkGTIrGlJMZo6wllLPrq8sMugCgYIKoZIzj0DAQehRANCAASPU6GJb1cTDCGV
+oyL+SuazBpyPSaQ+9FTSEzvIicu+tXuLDX5plbv+zeCIN2muhvfrnvlAgRrN/vjU
+6lMs2xEN\n-----END PRIVATE KEY-----"
+    GIT_AUTHORIZATION = "RichaMTechmero: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"
+
+
+def delete_temp_keychain(name)
+  delete_keychain(
+    name: name
+  ) if File.exist? File.expand_path("~/Library/Keychains/#{name}-db")
+end
+
+
+def create_temp_keychain(name, password)
+  create_keychain(
+    name: name,
+    password: password,
+    unlock: false,
+    timeout: 0
+  )
+end
+
+
+def ensure_temp_keychain(name, password)
+  delete_temp_keychain(name)
+  create_temp_keychain(name, password)
+end
+
+
+platform :ios do
+  lane :closed_beta do
+    keychain_name = TEMP_KEYCHAIN_USER
+    keychain_password = TEMP_KEYCHAIN_PASSWORD
+    ensure_temp_keychain(keychain_name, keychain_password)
+
+
+    api_key = app_store_connect_api_key(
+      key_id: APPLE_KEY_ID,
+      issuer_id: APPLE_ISSUER_ID,
+      key_content: APPLE_KEY_CONTENT,
+      duration: 1200,
+      in_house: false
+    )
+    
+    increment_build_number(xcodeproj: "GitTetsingDemo.xcodeproj")
+    
+    #cocoapods(
+    #  clean_install: true
+    #)
+
+
+    match(
+      type: 'appstore',
+      app_identifier: "#{DEVELOPER_APP_IDENTIFIER}",
+      git_basic_authorization: Base64.strict_encode64(GIT_AUTHORIZATION),
+      readonly: true,
+      keychain_name: keychain_name,
+      keychain_password: keychain_password,
+      api_key: api_key
+    )
+
+
+    gym(
+      configuration: "Release",
+      workspace: "GitTetsingDemo.xcworkspace",
+      scheme: "GitTetsingDemo",
+      export_method: "app-store",
+      export_options: {
+        provisioningProfiles: {
+            DEVELOPER_APP_ID => PROVISIONING_PROFILE_SPECIFIER
+        }
+      }
+    )
+
+
+    pilot(
+      apple_id: "#{DEVELOPER_APP_ID}",
+      app_identifier: "#{DEVELOPER_APP_IDENTIFIER}",
+      skip_waiting_for_build_processing: true,
+      skip_submission: true,
+      distribute_external: false,
+      notify_external_testers: false,
+      ipa: "./GitTetsingDemo.ipa"
+    )
+
+
+    delete_temp_keychain(keychain_name)
+  end
+end
