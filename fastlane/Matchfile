@@ -1,4 +1,4 @@
-git_url("https://github.com/RichaMTechmero/SecondGithubAction.git")
+git_url("https://RichaMTechmero@github.com/RichaMTechmero/SecondGithubAction.git")
 
 storage_mode("git")
 
