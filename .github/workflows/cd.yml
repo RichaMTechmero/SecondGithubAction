@@ -1,7 +1,7 @@
-name: cd
+name: pull_request
 
 on:
-  cd:
+  pull_request:
     branches: ["main"]
 
 jobs:
