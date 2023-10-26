@@ -6,7 +6,7 @@ target 'GitTetsingDemo' do
   use_frameworks!
 
   # Pods for GitTetsingDemo
-
+  pod 'SwiftLint'
   target 'GitTetsingDemoTests' do
     inherit! :search_paths
     # Pods for testing
