@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65A37AB360819123007275A7 /* Pods_GitTetsingDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27475A38D63AAD193BAEBC7E /* Pods_GitTetsingDemoTests.framework */; };
+		678A53EDBBC3F2B243839684 /* Pods_GitTetsingDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D9681627F16E2B0A65F0529 /* Pods_GitTetsingDemo.framework */; };
+		CFC6EC047F07A04A6E1200F3 /* Pods_GitTetsingDemo_GitTetsingDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCCBC54A78CCB8E836229C1 /* Pods_GitTetsingDemo_GitTetsingDemoUITests.framework */; };
 		E4C652022AE2718700871131 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C652012AE2718700871131 /* AppDelegate.swift */; };
 		E4C652042AE2718700871131 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C652032AE2718700871131 /* SceneDelegate.swift */; };
 		E4C652062AE2718700871131 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C652052AE2718700871131 /* ViewController.swift */; };
@@ -37,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27475A38D63AAD193BAEBC7E /* Pods_GitTetsingDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitTetsingDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BC44BDC8EA7690447A7D17D /* Pods-GitTetsingDemo-GitTetsingDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitTetsingDemo-GitTetsingDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-GitTetsingDemo-GitTetsingDemoUITests/Pods-GitTetsingDemo-GitTetsingDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2D092B79449966D98D46E4DE /* Pods-GitTetsingDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitTetsingDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-GitTetsingDemoTests/Pods-GitTetsingDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5D9681627F16E2B0A65F0529 /* Pods_GitTetsingDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitTetsingDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BCCBC54A78CCB8E836229C1 /* Pods_GitTetsingDemo_GitTetsingDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitTetsingDemo_GitTetsingDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96BA55039AA0F0F6517FC56F /* Pods-GitTetsingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitTetsingDemo.release.xcconfig"; path = "Target Support Files/Pods-GitTetsingDemo/Pods-GitTetsingDemo.release.xcconfig"; sourceTree = "<group>"; };
+		A813491F6962F6306FF0D553 /* Pods-GitTetsingDemo-GitTetsingDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitTetsingDemo-GitTetsingDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-GitTetsingDemo-GitTetsingDemoUITests/Pods-GitTetsingDemo-GitTetsingDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B297B222556A818A79C252E8 /* Pods-GitTetsingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitTetsingDemo.debug.xcconfig"; path = "Target Support Files/Pods-GitTetsingDemo/Pods-GitTetsingDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E4C651FE2AE2718700871131 /* GitTetsingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitTetsingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C652012AE2718700871131 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4C652032AE2718700871131 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +62,7 @@
 		E4C652212AE2718800871131 /* GitTetsingDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitTetsingDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C652252AE2718800871131 /* GitTetsingDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitTetsingDemoUITests.swift; sourceTree = "<group>"; };
 		E4C652272AE2718800871131 /* GitTetsingDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitTetsingDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F7794C0268191AE456FD605A /* Pods-GitTetsingDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitTetsingDemoTests.release.xcconfig"; path = "Target Support Files/Pods-GitTetsingDemoTests/Pods-GitTetsingDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678A53EDBBC3F2B243839684 /* Pods_GitTetsingDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65A37AB360819123007275A7 /* Pods_GitTetsingDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +86,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFC6EC047F07A04A6E1200F3 /* Pods_GitTetsingDemo_GitTetsingDemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A45D5FAAE01618EEC27D89F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D9681627F16E2B0A65F0529 /* Pods_GitTetsingDemo.framework */,
+				7BCCBC54A78CCB8E836229C1 /* Pods_GitTetsingDemo_GitTetsingDemoUITests.framework */,
+				27475A38D63AAD193BAEBC7E /* Pods_GitTetsingDemoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E4C651F52AE2718700871131 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +110,8 @@
 				E4C6521A2AE2718800871131 /* GitTetsingDemoTests */,
 				E4C652242AE2718800871131 /* GitTetsingDemoUITests */,
 				E4C651FF2AE2718700871131 /* Products */,
+				ED6E8C2CE2DEB55A95C57CB6 /* Pods */,
+				8A45D5FAAE01618EEC27D89F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +155,20 @@
 				E4C652272AE2718800871131 /* GitTetsingDemoUITestsLaunchTests.swift */,
 			);
 			path = GitTetsingDemoUITests;
+			sourceTree = "<group>";
+		};
+		ED6E8C2CE2DEB55A95C57CB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B297B222556A818A79C252E8 /* Pods-GitTetsingDemo.debug.xcconfig */,
+				96BA55039AA0F0F6517FC56F /* Pods-GitTetsingDemo.release.xcconfig */,
+				A813491F6962F6306FF0D553 /* Pods-GitTetsingDemo-GitTetsingDemoUITests.debug.xcconfig */,
+				2BC44BDC8EA7690447A7D17D /* Pods-GitTetsingDemo-GitTetsingDemoUITests.release.xcconfig */,
+				2D092B79449966D98D46E4DE /* Pods-GitTetsingDemoTests.debug.xcconfig */,
+				F7794C0268191AE456FD605A /* Pods-GitTetsingDemoTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -508,6 +549,7 @@
 		};
 		E4C6522C2AE2718800871131 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B297B222556A818A79C252E8 /* Pods-GitTetsingDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -547,6 +589,7 @@
 		};
 		E4C6522D2AE2718800871131 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96BA55039AA0F0F6517FC56F /* Pods-GitTetsingDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -587,6 +630,7 @@
 		};
 		E4C6522F2AE2718800871131 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D092B79449966D98D46E4DE /* Pods-GitTetsingDemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -606,6 +650,7 @@
 		};
 		E4C652302AE2718800871131 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7794C0268191AE456FD605A /* Pods-GitTetsingDemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -625,6 +670,7 @@
 		};
 		E4C652322AE2718800871131 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A813491F6962F6306FF0D553 /* Pods-GitTetsingDemo-GitTetsingDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -642,6 +688,7 @@
 		};
 		E4C652332AE2718800871131 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BC44BDC8EA7690447A7D17D /* Pods-GitTetsingDemo-GitTetsingDemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
