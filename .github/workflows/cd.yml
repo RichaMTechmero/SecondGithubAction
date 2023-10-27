@@ -48,9 +48,9 @@ jobs:
       - name: build archive
         run: |
           xcodebuild -scheme "GitTetsingDemo" \
-          -archivePath $RUNNER_TEMP/GitTetsingDemo.xcarchive \
           -sdk iphoneos \
           -configuration Debug \
+          -destination generic/platform=iOS \
           clean archive
 
       - name: export ipa
