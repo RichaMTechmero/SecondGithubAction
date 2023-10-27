@@ -49,7 +49,7 @@ jobs:
         run: |
           xcodebuild -scheme "GitTetsingDemo" \
           -archivePath $RUNNER_TEMP/GitTetsingDemo.xcarchive \
-          -configuration Debug \
+          -sdk iphoneos \
           -destination generic/platform=iOS \
           clean archive
 
