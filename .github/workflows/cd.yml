@@ -216,9 +216,9 @@ jobs:
         with:
           path: ChangeLog/cicd_changelog.md
       - name: Clean Build Archive
-        run: xcodebuild -workspace Starboard.xcworkspace -scheme Starboard clean archive -configuration DevRelease -sdk iphoneos -archivePath Starboard.xcarchive
+        run: xcodebuild -workspace GitTetsingDemo.xcworkspace -scheme GitTetsingDemo clean archive -configuration DevRelease -sdk iphoneos -archivePath GitTetsingDemo.xcarchive
       - name: Export IPA
-        run:  xcodebuild -exportArchive -archivePath Starboard.xcarchive -exportOptionsPlist Starboard/exportOptions.plist -exportPath $RUNNER_TEMP/export
+        run:  xcodebuild -exportArchive -archivePath GitTetsingDemo.xcarchive -exportOptionsPlist GitTetsingDemo/exportOptions.plist -exportPath $RUNNER_TEMP/export
       - name: Decode auth. api key file and save it
         env:
           API_KEY_BASE64 : ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
@@ -231,8 +231,8 @@ jobs:
       - name: Upload file to test flight
         run: |
              echo "Star Uploading"
-             xcrun altool --validate-app -f  $RUNNER_TEMP/export/Starboard.ipa -t ios --apiKey ${{ secrets.APPSTORE_API_KEY_ID }} --apiIssuer ${{ secrets.APPSTORE_API_ISSUER_ID }}
-             xcrun altool --upload-app -f  $RUNNER_TEMP/export/Starboard.ipa -t ios --apiKey ${{ secrets.APPSTORE_API_KEY_ID }} --apiIssuer ${{ secrets.APPSTORE_API_ISSUER_ID }}
+             xcrun altool --validate-app -f  $RUNNER_TEMP/export/GitTetsingDemo.ipa -t ios --apiKey ${{ secrets.APPSTORE_API_KEY_ID }} --apiIssuer ${{ secrets.APPSTORE_API_ISSUER_ID }}
+             xcrun altool --upload-app -f  $RUNNER_TEMP/export/GitTetsingDemo.ipa -t ios --apiKey ${{ secrets.APPSTORE_API_KEY_ID }} --apiIssuer ${{ secrets.APPSTORE_API_ISSUER_ID }}
       - name: Notify on Slack
         env:
           TITLE : "CI/CD Starboard-iOS"
