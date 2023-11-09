@@ -218,7 +218,7 @@ jobs:
       - name: Clean Build Archive
         run: xcodebuild -workspace GitTetsingDemo.xcworkspace -scheme GitTetsingDemo clean archive -configuration DevRelease -sdk iphoneos -archivePath GitTetsingDemo.xcarchive
       - name: Export IPA
-        run:  xcodebuild -exportArchive -archivePath GitTetsingDemo.xcarchive -exportOptionsPlist GitTetsingDemo/exportOptions.plist -exportPath $RUNNER_TEMP/export
+        run:  xcodebuild -exportArchive -archivePath GitTetsingDemo.xcarchive -exportOptionsPlist GitTetsingDemo/info.plist -exportPath $RUNNER_TEMP/export
       - name: Decode auth. api key file and save it
         env:
           API_KEY_BASE64 : ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
