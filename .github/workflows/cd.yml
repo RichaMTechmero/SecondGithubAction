@@ -203,8 +203,8 @@ jobs:
         run: xcrun agvtool next-version
       - name: Commit and push changes
         run: |
-          git config user.email "github-actions@github.com"
-          git config user.name "Github Actions"
+          git config user.email "richamtechmero@gmail.com"
+          git config user.name "RichaMTechmero"
           git commit -am "Bump version code"
           git push origin HEAD
       - name: Read Changelog File
