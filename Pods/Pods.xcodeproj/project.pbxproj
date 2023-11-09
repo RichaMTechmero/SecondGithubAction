@@ -44,7 +44,7 @@
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		74340E73AB2EE5CB4BCD2408B88F1003 /* Pods-GitTetsingDemo-GitTetsingDemoUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GitTetsingDemo-GitTetsingDemoUITests-Info.plist"; sourceTree = "<group>"; };
 		822E10DB6F2B53DCAEB533AAF2B612BA /* Pods-GitTetsingDemo-GitTetsingDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GitTetsingDemo-GitTetsingDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AA5620A8396DF2F367A517EC5F2DA2F3 /* Pods-GitTetsingDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GitTetsingDemo-dummy.m"; sourceTree = "<group>"; };
 		B70820433CA017CDD745DEC49204B0CB /* Pods-GitTetsingDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GitTetsingDemo.modulemap"; sourceTree = "<group>"; };
 		C1CE91F3E9DAEA69CD5B77B50557C3B0 /* Pods-GitTetsingDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GitTetsingDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 		DD5FE0C6B37078490800DF3307B52CBE /* Pods-GitTetsingDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GitTetsingDemo-umbrella.h"; sourceTree = "<group>"; };
 		DE22D89F2632BCBC4B4131CE48E957DB /* Pods-GitTetsingDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GitTetsingDemoTests-dummy.m"; sourceTree = "<group>"; };
 		E893C60F250CFE68EA423D02D8592179 /* Pods-GitTetsingDemo-GitTetsingDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GitTetsingDemo-GitTetsingDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		F2D25B68C033A3415B0FFA1FB488774F /* Pods_GitTetsingDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitTetsingDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2D25B68C033A3415B0FFA1FB488774F /* Pods-GitTetsingDemo */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GitTetsingDemo"; path = Pods_GitTetsingDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D7CC0F5D7CD58EC41C741208B731BD /* Pods-GitTetsingDemoTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GitTetsingDemoTests"; path = Pods_GitTetsingDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3048BFC71FEF90679547DDB166D0989 /* Pods-GitTetsingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GitTetsingDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,7 +125,7 @@
 		64FA7B08C7E4D051430D4BD1BBAE29D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F2D25B68C033A3415B0FFA1FB488774F /* Pods_GitTetsingDemo.framework */,
+				F2D25B68C033A3415B0FFA1FB488774F /* Pods-GitTetsingDemo */,
 				07410704E6568112C12502CC77FC858D /* Pods-GitTetsingDemo-GitTetsingDemoUITests */,
 				F2D7CC0F5D7CD58EC41C741208B731BD /* Pods-GitTetsingDemoTests */,
 			);
@@ -246,7 +246,7 @@
 			);
 			name = "Pods-GitTetsingDemo";
 			productName = Pods_GitTetsingDemo;
-			productReference = F2D25B68C033A3415B0FFA1FB488774F /* Pods_GitTetsingDemo.framework */;
+			productReference = F2D25B68C033A3415B0FFA1FB488774F /* Pods-GitTetsingDemo */;
 			productType = "com.apple.product-type.framework";
 		};
 		9A11D2858475B75185EE65DCD58DF152 /* Pods-GitTetsingDemo-GitTetsingDemoUITests */ = {
@@ -273,8 +273,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -438,10 +438,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -513,10 +514,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
