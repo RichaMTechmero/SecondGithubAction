@@ -7,21 +7,6 @@
   "configuredTargets" : [
     {
       "guid" : "e1508534dbcd69f9f01923eb4ccd177afece14700ef050d1d57c252b10449bbc"
-    },
-    {
-      "guid" : "e1508534dbcd69f9f01923eb4ccd177a3aa94b54d1ac9d13edf9429a117e9c46"
-    },
-    {
-      "guid" : "e1508534dbcd69f9f01923eb4ccd177a5a0bcdb2854f0c7afe462d84b1476b9f"
-    },
-    {
-      "guid" : "8699adb1dd336b26511df848a716bd42b5b394217ba5386ad2e0cd608204df10"
-    },
-    {
-      "guid" : "8699adb1dd336b26511df848a716bd425221e8638c4ce46e90b5bdf81fd6a678"
-    },
-    {
-      "guid" : "8699adb1dd336b26511df848a716bd42e01e9513a1d1045584c5596c699b9ffa"
     }
   ],
   "containerPath" : "/Users/techmero/Documents/Projects/GitTetsingDemo/GitTetsingDemo.xcworkspace",
@@ -62,8 +47,6 @@
     "overrides" : {
       "synthesized" : {
         "table" : {
-          "CLANG_COVERAGE_MAPPING" : "YES",
-          "CLANG_PROFILE_DATA_DIRECTORY" : "/Users/techmero/Library/Developer/Xcode/DerivedData/GitTetsingDemo-bsufksadwwiqdjacephmtbdnbrvq/CodeCoverage/ProfileData",
           "ENABLE_PREVIEWS" : "NO",
           "ENABLE_XOJIT_PREVIEWS" : "NO"
         }
