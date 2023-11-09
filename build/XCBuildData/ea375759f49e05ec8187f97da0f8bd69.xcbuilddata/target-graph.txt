@@ -1,0 +1,5 @@
+Target dependency graph (3 targets)
+Target 'Pods-GitTetsingDemoTests' in project 'Pods'
+➜ Explicit dependency on target 'Pods-GitTetsingDemo' in project 'Pods'
+Target 'Pods-GitTetsingDemo-GitTetsingDemoUITests' in project 'Pods' (no dependencies)
+Target 'Pods-GitTetsingDemo' in project 'Pods' (no dependencies)

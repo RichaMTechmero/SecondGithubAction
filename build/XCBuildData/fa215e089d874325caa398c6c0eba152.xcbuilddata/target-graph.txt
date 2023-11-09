@@ -1,4 +1,0 @@
-Target dependency graph (2 targets)
-Target 'GitTetsingDemo' in project 'GitTetsingDemo'
-➜ Implicit dependency on target 'Pods-GitTetsingDemo' in project 'Pods' via file 'Pods_GitTetsingDemo.framework' in build phase 'Link Binary'
-Target 'Pods-GitTetsingDemo' in project 'Pods' (no dependencies)
