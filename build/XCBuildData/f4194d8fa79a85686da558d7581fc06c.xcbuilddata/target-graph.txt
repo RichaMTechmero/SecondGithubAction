@@ -1,0 +1,13 @@
+Target dependency graph (6 targets)
+Target 'GitTetsingDemoUITests' in project 'GitTetsingDemo'
+➜ Explicit dependency on target 'GitTetsingDemo' in project 'GitTetsingDemo'
+➜ Implicit dependency on target 'Pods-GitTetsingDemo-GitTetsingDemoUITests' in project 'Pods' via file 'Pods_GitTetsingDemo_GitTetsingDemoUITests.framework' in build phase 'Link Binary'
+Target 'Pods-GitTetsingDemo-GitTetsingDemoUITests' in project 'Pods' (no dependencies)
+Target 'GitTetsingDemoTests' in project 'GitTetsingDemo'
+➜ Explicit dependency on target 'GitTetsingDemo' in project 'GitTetsingDemo'
+➜ Implicit dependency on target 'Pods-GitTetsingDemoTests' in project 'Pods' via file 'Pods_GitTetsingDemoTests.framework' in build phase 'Link Binary'
+Target 'Pods-GitTetsingDemoTests' in project 'Pods'
+➜ Explicit dependency on target 'Pods-GitTetsingDemo' in project 'Pods'
+Target 'GitTetsingDemo' in project 'GitTetsingDemo'
+➜ Implicit dependency on target 'Pods-GitTetsingDemo' in project 'Pods' via file 'Pods_GitTetsingDemo.framework' in build phase 'Link Binary'
+Target 'Pods-GitTetsingDemo' in project 'Pods' (no dependencies)
