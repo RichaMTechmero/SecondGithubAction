@@ -113,7 +113,6 @@
 				B20A5316FDC3311CC35C36D1 /* Pods-GitTetsingDemoTests.debug.xcconfig */,
 				913A77292BC5A01EC770FE95 /* Pods-GitTetsingDemoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -618,7 +617,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.techmero.TestingGithub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match AppStore com.techmero.TestingGithub";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match AdHoc com.techmero.TestingGithub";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
