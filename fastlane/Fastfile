@@ -1,0 +1,118 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+
+    DEVELOPER_APP_ID = "6469590329"
+    DEVELOPER_APP_IDENTIFIER = "com.techmero.TestingGithub"
+    PROVISIONING_PROFILE_SPECIFIER = "match Development com.techmero.TestingGithub"
+    TEMP_KEYCHAIN_USER = "techmero"
+    TEMP_KEYCHAIN_PASSWORD = "techmero"
+    APPLE_ISSUER_ID = "37938031-4e89-484d-96e6-213008263413"
+    APPLE_KEY_ID = "5NSJ6YJCW7"
+    APPLE_KEY_CONTENT = "-----BEGIN PRIVATE KEY-----\nMIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgrTU8Dto9UQqoL7Xp
+RjGPkGTIrGlJMZo6wllLPrq8sMugCgYIKoZIzj0DAQehRANCAASPU6GJb1cTDCGV
+oyL+SuazBpyPSaQ+9FTSEzvIicu+tXuLDX5plbv+zeCIN2muhvfrnvlAgRrN/vjU
+6lMs2xEN\n-----END PRIVATE KEY-----"
+    GIT_AUTHORIZATION = "RichaMTechmero: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"
+	SSHAuthKey = "-----BEGIN OPENSSH PRIVATE KEY-----\nAAAAB3NzaC1yc2EAAAADAQABAAABgQDAQ0a3pBRxcqVclPk67xCZj+t1vowdnvUBGe24aRQ/Ca8Z0gsw0ET+1yDvQT9YkUuzJ5H0FdyV3jxcJwLskuxJiXuK5KIQfkFcTuIaXVSfnwypTuqTzcMCk7cQaBviWw1Ull/pfsHRtaxxYyAEQCg0Hepwd9KSX9b6Elg3BMXeR0S/KGgoh83d5Wl2zq2MAL0bSkXOVBApjPoCyHWnqad4JnLoxC0ir28aJsggoNz8fxavgB8K9Vgkmpxg2tCkHfEFP9V6KkHrb4CX5xJo/a47ENzRA+nAsaBSdnDXUPhtWEvSE6SCzwSYBHPCq0X3rwtFHT2OlFnToY5eG3vfbfWHF4/ZGO2g2TcydRAVzOxfF8y8bCH+wu6KbglBGbz7v/pn5y1F8GdYVSPWXVzL0Jq9fWr0HQiqFLcH1WqShDYP8GfjcL8QMMFrV+FmDkkLkaX0anRTdxGldSx1IRc/HGXn5GcEexw26UQWLwPphnDa9yOIjYDd1x8bYTSgv17vYa8=\n-----END OPENSSH PRIVATE KEY-----"
+
+
+def delete_temp_keychain(name)
+  delete_keychain(
+    name: name
+  ) if File.exist? File.expand_path("~/Library/Keychains/#{name}-db")
+end
+
+
+def create_temp_keychain(name, password)
+  create_keychain(
+    name: name,
+    password: password,
+    unlock: false,
+    timeout: 0
+  )
+end
+
+
+def ensure_temp_keychain(name, password)
+  delete_temp_keychain(name)
+  create_temp_keychain(name, password)
+end
+
+
+platform :ios do
+  lane :closed_beta do
+    keychain_name = TEMP_KEYCHAIN_USER
+    keychain_password = TEMP_KEYCHAIN_PASSWORD
+    ensure_temp_keychain(keychain_name, keychain_password)
+
+
+    api_key = app_store_connect_api_key(
+      key_id: APPLE_KEY_ID,
+      issuer_id: APPLE_ISSUER_ID,
+      key_content: APPLE_KEY_CONTENT,
+      duration: 1200,
+      in_house: false
+    )
+    
+    increment_build_number(xcodeproj: "GitTetsingDemo.xcodeproj")
+    
+    #cocoapods(
+    #  clean_install: true
+    #)
+
+
+    match(
+      type: 'appstore',
+      app_identifier: "#{DEVELOPER_APP_IDENTIFIER}",
+      git_basic_authorization: Base64.strict_encode64(GIT_AUTHORIZATION),
+      readonly: false,
+      keychain_name: keychain_name,
+      keychain_password: keychain_password,
+      api_key: api_key,
+	#git_private_key: SSHAuthKey
+    )
+
+
+    gym(
+      configuration: "Release",
+      workspace: "GitTetsingDemo.xcworkspace",
+      scheme: "GitTetsingDemo",
+      export_method: "app-store",
+      export_options: {
+        provisioningProfiles: {
+            DEVELOPER_APP_ID => PROVISIONING_PROFILE_SPECIFIER
+        }
+      }
+    )
+
+
+    pilot(
+	itc_provider:"#{DEVELOPER_APP_ID}",
+      apple_id: "#{DEVELOPER_APP_ID}",
+      app_identifier: "#{DEVELOPER_APP_IDENTIFIER}",
+      skip_waiting_for_build_processing: true,
+      skip_submission: true,
+      distribute_external: false,
+      notify_external_testers: false,
+      ipa: "./GitTetsingDemo.ipa"
+    )
+
+
+    delete_temp_keychain(keychain_name)
+  end
+end

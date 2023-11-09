@@ -1,0 +1,8 @@
+app_identifier("com.techmero.TestingGithub") # The bundle identifier of your app
+apple_id("official@bvktechnologies.com") # Your Apple Developer Portal username
+
+itc_team_id("124023706") # App Store Connect Team ID
+team_id("85K4MBU7M6") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

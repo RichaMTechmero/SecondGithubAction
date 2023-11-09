@@ -1,0 +1,5 @@
+ extern const unsigned char Pods_GitTetsingDemoTestsVersionString[];
+ extern const double Pods_GitTetsingDemoTestsVersionNumber;
+
+ const unsigned char Pods_GitTetsingDemoTestsVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Pods_GitTetsingDemoTests  PROJECT:Pods-1" "\n";
+ const double Pods_GitTetsingDemoTestsVersionNumber __attribute__ ((used)) = (double)1.;
