@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8A9480B56A69D102FD17F358 /* Pods_GitTetsingDemo_GitTetsingDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FCD5D1D927E27D601F5EA2 /* Pods_GitTetsingDemo_GitTetsingDemoUITests.framework */; };
 		B75B6F653E803368ABC02BB9 /* Pods_GitTetsingDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FB2F3AFA20C25964891F2E /* Pods_GitTetsingDemoTests.framework */; };
+		D3654EE87F2D48E338C9DA6C /* Pods_GitTetsingDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A654E1C7BDCBA8158468460C /* Pods_GitTetsingDemo.framework */; };
 		E4C652022AE2718700871131 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C652012AE2718700871131 /* AppDelegate.swift */; };
 		E4C652042AE2718700871131 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C652032AE2718700871131 /* SceneDelegate.swift */; };
 		E4C652062AE2718700871131 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C652052AE2718700871131 /* ViewController.swift */; };
@@ -69,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3654EE87F2D48E338C9DA6C /* Pods_GitTetsingDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,7 +555,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development: Krishna Parmar (3P8932YPWL)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Krishna Parmar (3P8932YPWL)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 85K4MBU7M6;
 				FRAMEWORK_SEARCH_PATHS = "";
@@ -594,7 +596,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development: Krishna Parmar (3P8932YPWL)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Krishna Parmar (3P8932YPWL)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 85K4MBU7M6;
 				FRAMEWORK_SEARCH_PATHS = "";
@@ -634,7 +636,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
@@ -654,7 +656,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
@@ -673,7 +675,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.techmero.GitTetsingDemoUITests;
@@ -691,7 +693,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.techmero.GitTetsingDemoUITests;
